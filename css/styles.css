@@ -1,0 +1,194 @@
+/*****************************
+  BASE SETUP
+*****************************/
+
+html {
+  box-sizing: border-box; /* use IE box model */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /* inherit allows for easy creation of a new box model context further down the tree */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
+  font-family: "Montserrat", sans-serif;
+  background: rgb(237,241,242);
+}
+
+.container{
+  width: 60%;
+  height: 80%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/*****************************
+  BANNER IMAGE
+*****************************/
+.container .banner{
+  flex: 4;
+}
+
+.banner img{
+  width: 100%;
+  height: 100%;
+}
+
+/*****************************
+  HEADER NAME
+*****************************/
+
+.container .header{
+  flex: 1;
+  padding: 20px 40px;
+  background: rgb(249, 249, 249);
+}
+
+.header .name{
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: rgb(44,44,44);
+  letter-spacing: 0.02em;
+  margin-right: 20px;
+}
+
+.header .creator{
+  display: inline-block;
+  color: rgb(155,155,155);
+  font-size: 1.1em;
+  letter-spacing: 0.05rem;
+}
+
+/*****************************
+  DETAILS 
+*****************************/
+
+.container .details{
+  flex: 4;
+  display: flex;
+  background: white;
+  padding-top: 25px;
+}
+
+.details .stats{
+  text-align: center;
+  flex: 1;
+}
+
+.stats p{
+  padding-bottom: 25px;
+  color: rgb(155,155,155);
+}
+
+.stats .number{
+  font-weight: 700;
+  font-size: 1.5em;
+  color: rgb(44,44,44);
+  padding-right: 5px;
+}
+
+/* Adjust elements for left-alignment */
+
+#day-count{
+  position: relative;
+  left: -4px;
+}
+
+#backer-count{
+  position: relative;
+  left: -1.5px;
+}
+
+/*****************************
+  PROGRESS BAR SECTION
+*****************************/
+.details .progress{
+  flex: 2;
+  padding-right: 10%;
+}
+
+/* Status bar background */
+.progress .status-bar-bg{
+  margin-top: 7px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 10px;
+  background:rgb(207,207,207);
+  margin-bottom: 10px;
+}
+
+/* Status bar progress */
+.status-bar-progress{
+  width: 70%;
+  height: 10px;
+  background: rgb(44,222,115);
+}
+
+/* Exact status details */
+.status-details{
+  color: rgb(155,155,155);
+  margin-bottom: 30px;
+}
+
+/*********************
+  BUTTON STYLING
+**********************/
+
+button{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  outline: none;
+  border-color: transparent;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  color:rgb(249,249,249);
+  text-transform: uppercase;
+  /* letter-spacing: 0.05em; */
+  font-size: 0.8rem;
+  background: rgb(207,207,207);
+  font-weight: 500;
+}
+@media only screen and (max-width: 1200px){
+  button{
+    font-size: 0.65rem;
+  }
+}
+
+button:active {
+  border-style: outset;
+}
+
+/*********************
+  BUTTON ALIGNMENT
+**********************/
+.buttons{
+  display:flex;
+}
+
+#back-proj{
+  flex:1;
+}
+
+#back-proj button{
+  background-color: rgb(44,222,115);
+}
+
+#space{
+  flex-basis: 20px;
+}
+
+#share{
+  flex: 1;
+}
